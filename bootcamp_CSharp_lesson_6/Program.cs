@@ -31,11 +31,15 @@ namespace bootcamp_CSharp_lesson_6
                     miNumero = int.Parse(Console.ReadLine());
 
                 }
-                catch(FormatException ex)
+                catch (Exception ex)
                 {
-                    Console.WriteLine("No has introducido un valor numérico válido. Se toma como n° introducido el 0");  
+                    Console.WriteLine("No has introducido un valor numérico válido. Se toma como n° introducido el 0");
+
+                    Console.WriteLine(ex.Message);
+
                     miNumero = 0;
                 }
+                
 
                 if (miNumero > aleatorio) Console.WriteLine("El n° es más bajo");
 
